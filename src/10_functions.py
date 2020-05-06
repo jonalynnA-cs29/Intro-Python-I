@@ -6,8 +6,6 @@ def even_number(n) -> bool:
         return True
 
 
-print(even_number(24))
-
 # Read a number from the keyboard
 num = input("Enter a number: ")
 num = int(num)

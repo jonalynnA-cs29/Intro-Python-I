@@ -51,12 +51,21 @@ pp.pprint(waypoints)
 # Note: It's okay to access the dictionary using bracket notation on the
 # waypoints list.
 
-for a_dictionary, x in enumerate(waypoints):
-    for key, val in x.items():
-        if val == 'a place':
-            waypoints[a_dictionary]['name'] = 'not a real place'
-            waypoints[a_dictionary]['lon'] = -130
+# for a_dictionary, x in enumerate(waypoints):
+#     for key, val in x.items():
+#         if val == 'a place':
+#             waypoints[a_dictionary]['name'] = 'not a real place'
+#             waypoints[a_dictionary]['lon'] = -130
+# pp.pprint(waypoints)
+
+# Way easier way
+waypoints[0]['lon'] = -130
+waypoints[0]['name'] = "not a real place"
 pp.pprint(waypoints)
+
+# Another easy way
+waypoints[0].update({"name": "not a real place", "lon": -130})
+
 
 # Write a loop that prints out all the field values for all the waypoints
 # Write a loop that prints out all the field values for all the waypoints

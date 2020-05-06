@@ -28,9 +28,12 @@ if num > 1:
         if (num % i) == 0:
             # iterate through and list out why it's not prime
             print(num, "is not a prime number")
-            print(i, "times", num // i, "is", num)  # 2 x 5 = 10, 5 x 2 = 10
-        else: 
-            print("Number is prime")  #NOTE: IDK why but it prints this no matter what instead of only if the number is prime
+            # 2 x 5 = 10, 5 x 2 = 10
+            if (num % i) == 0:
+                print(i, "times", num // i, "is", num)
+        else:
+            # NOTE: IDK why but it prints this no matter what instead of only if the number is prime NOTE: Resolved
+            print(num, "is a prime number!")
 
 # if input number is less than
 # or equal to 1, it is not prime
